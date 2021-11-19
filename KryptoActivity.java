@@ -21,6 +21,9 @@ public class KryptoNoteActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.kryptonote_layout);
     }
+    /**
+    *This function will encrypt the text
+    **/
     public void onEncrypt(View v){
         try
         {
@@ -46,6 +49,9 @@ public class KryptoNoteActivity extends AppCompatActivity
 
 
     }
+    /**
+    *This function will decrypt the text
+    **/
     public void onDecrypt(View v){
         EditText keyView = (EditText) findViewById(R. id.key);
         String key = keyView.getText().toString();
@@ -62,6 +68,9 @@ public class KryptoNoteActivity extends AppCompatActivity
         }
 
     }
+    /**
+    *This function will save the text
+    **/
     public void onSave(View v){
         try{
             String name =((EditText) findViewById(R.id.file)).getText().toString();
@@ -76,6 +85,9 @@ public class KryptoNoteActivity extends AppCompatActivity
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
+    /**
+    *This function will load the text from memory
+    **/
     public void onLoad(View v){
         try{
             String name =((EditText) findViewById(R.id.file)).getText().toString();
